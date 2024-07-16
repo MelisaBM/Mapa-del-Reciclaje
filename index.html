@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi Página</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<header>
+        <h1>Mapa Interactivo</h1>
+        <h2>Lugares de acopio en La Plata</h2>
+    </header>
+    
+</head>
+<body>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-34.9214, -57.9544], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var puntos = [
+            {"name": "Plaza Moreno", "location": [-34.9212, -57.9545]},
+            {"name": "Catedral de La Plata", "location": [-34.9211, -57.9547]},
+            {"name": "Museo de La Plata", "location": [-34.9111, -57.9377]},
+            {"name": "FCNyM","location": [-34.908491, -57.926623] },
+           {"name": "Punto de acopio", "location": [-34.918025, -57.961631]},];
+
+        puntos.forEach(function(punto) {
+            L.marker(punto.location).addTo(map)
+                .bindPopup(punto.name);
+        });
+    </script>
+    
+    <section>
+        <h2>Reciclar es transformar desechos en esperanza</h2>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap" rel="stylesheet">
+
+        <p>Contenido de la sección principal.</p>
+    </section>
+    <footer>
+        <p>Derechos Reservados © 2024</p>
+    </footer>
+</body>
+</html>
+
+<style> body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+section {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+</style>
