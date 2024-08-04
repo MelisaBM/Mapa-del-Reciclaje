@@ -20,18 +20,29 @@
 
         body {
 
-            background:  #277355;;
-	
-	
+	background: url("fondo web.png") no-repeat center center fixed;
+            background-size: cover;
             font-family: 'Montserrat', sans-serif;
+	
+            
         }
 
-        .contenedor {
-            width: 90%;
-            max-width: 1000px;
-            margin: 20px auto;
-        }
+     
+        
 
+
+	.contenedor {
+          width: 90%;
+          max-width: 1000px;
+          margin: 20px auto;
+
+         /* Add these three properties */
+          background: rgba(39, 115, 85, 0.8);
+          padding: 20px;
+          border-radius: 10px;
+      }
+
+	    
         .contenedor article {
             line-height: 28px;
         }
@@ -56,7 +67,7 @@
         }
 
         .overlay {
-            background: rgba(0, 0, 0, .3)
+            background: rgba(0, 0, 0, .3);
             position: fixed;
             top: 0;
             bottom: 0;
