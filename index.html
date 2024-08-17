@@ -286,12 +286,16 @@
         marker.on('click', function () {
             mostrarPopup("Aceite usado");});
 
-            var marker = L.marker([-34.9214, -57.9544]).addTo(map);
-            marker.bindTooltip("Lugar 1").openTooltip();
+            var marker = L.marker([-34.919931776595455, -57.92841925659987]).addTo(map);
+            marker.bindTooltip("Plaza Matheu - Punto Verde").openTooltip();
         marker.on('click', function () {
-            mostrarPopup("Plasticos, latas, cartones");});
+            mostrarPopup("Plásticos, vidrios, cartones");});
 // aca tengo que agregar los puntos verdes y azules
 	    //y el de ecobotellas
+	  var marker = L.marker([-34.93276937019405, -57.94095542285373]).addTo(map);
+            marker.bindTooltip("Parque Saavedra - Punto Azul").openTooltip();
+        marker.on('click', function () {
+            mostrarPopup("Plásticos, vidrios, cartones y compost");});
 	    
             var marker = L.marker([-34.9214, -57.9544]).addTo(map);
             marker.bindTooltip("Lugar 1").openTooltip();
